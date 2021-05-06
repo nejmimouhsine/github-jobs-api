@@ -17,7 +17,8 @@ const JobsList = () => {
           <JobContainer key={job.id} onClick={() => goToDetailsPage(job.id)}>
             <JobCompanyLogo src={job.company_logo} alt={job.company} />
             <JobPostedOn>
-              {job.created_at} <span></span> {job.type}
+              {new Date(job.created_at).toLocaleDateString()} <span></span>{" "}
+              {job.type}
             </JobPostedOn>
             <JobTitle>{job.title}</JobTitle>
             <JobCompany>{job.company}</JobCompany>
